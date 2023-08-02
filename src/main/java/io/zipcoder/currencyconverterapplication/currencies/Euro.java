@@ -9,4 +9,12 @@ public class Euro implements ConvertableCurrency {
         return "EUR";
     }
 
+
+    @Override
+    public Double convert(CurrencyType currencyType)
+    {
+
+        return currencyType.getRate()/CurrencyType.EURO.getRate();
+    }
+
 }

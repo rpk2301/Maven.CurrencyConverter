@@ -10,4 +10,14 @@ public class Ringgit implements ConvertableCurrency {
         return "RNG";
     }
 
+    @Override
+    public Double convert(CurrencyType currencyType)
+    {
+
+        return currencyType.getRate()/CurrencyType.RINGGIT.getRate();
+    }
+
+
+
+
 }

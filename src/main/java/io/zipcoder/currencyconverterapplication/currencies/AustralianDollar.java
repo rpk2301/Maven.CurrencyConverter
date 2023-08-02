@@ -7,7 +7,17 @@ public class AustralianDollar implements ConvertableCurrency {
 
 
     @Override
-    public String getCurrencyIdentifier() {
+    public String getCurrencyIdentifier()
+    {
         return "AUD";
     }
+
+
+    @Override
+    public Double convert(CurrencyType currencyType)
+    {
+
+        return currencyType.getRate()/CurrencyType.AUSTRALIAN_DOLLAR.getRate();
+    }
+
 }

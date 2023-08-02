@@ -1,6 +1,7 @@
 package io.zipcoder.currencyconverterapplication.currencies;
 
 import io.zipcoder.currencyconverterapplication.ConvertableCurrency;
+import io.zipcoder.currencyconverterapplication.CurrencyType;
 
 public class USDollar implements ConvertableCurrency {
 
@@ -9,5 +10,11 @@ public class USDollar implements ConvertableCurrency {
         return "USD";
     }
 
+    @Override
+    public Double convert(CurrencyType currencyType)
+    {
+
+        return currencyType.getRate()/CurrencyType.US_DOLLAR.getRate();
+    }
 
 }

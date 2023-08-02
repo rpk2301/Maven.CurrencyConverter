@@ -10,4 +10,13 @@ public class Pound implements ConvertableCurrency {
         return "PND";
     }
 
+
+    @Override
+    public Double convert(CurrencyType currencyType)
+    {
+        return currencyType.getRate()/CurrencyType.POUND.getRate();
+    }
+
+
+
 }

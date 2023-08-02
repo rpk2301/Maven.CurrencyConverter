@@ -10,6 +10,11 @@ public class ChineseYR implements ConvertableCurrency {
     public String getCurrencyIdentifier() {
         return "CHR";
     }
+    @Override
+    public Double convert(CurrencyType currencyType)
+    {
 
+        return currencyType.getRate()/CurrencyType.CHINESE_YR.getRate();
+    }
 
 }
