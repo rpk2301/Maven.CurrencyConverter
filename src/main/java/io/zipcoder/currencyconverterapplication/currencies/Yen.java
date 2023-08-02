@@ -10,7 +10,7 @@ public class Yen implements ConvertableCurrency {
     public String getCurrencyIdentifier() {
         return "YEN";
     }
-
+//
     @Override
     public Double convert(CurrencyType currencyType)
     {
